@@ -12,9 +12,11 @@
     "prop-types": "^15.6.2",
     "rails-ujs": "^5.2.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "file-loader": "^2.0.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "webpack-dev-server": "2.11.2"
   }
 }

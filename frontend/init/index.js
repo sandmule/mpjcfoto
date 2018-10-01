@@ -1,2 +1,2 @@
 import "./index.css";
-document.body.insertAdjacentHTML("afterbegin", "Webpacker works!");
+import "./coming_soon.css"
