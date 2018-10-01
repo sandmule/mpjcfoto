@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mpjcfoto</title>
+    <title>MPJC Foto</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag 'application', :defer => "defer" %>
+    <% if current_user || request.path == '/users/sign_in' || request.path == 'admin' %>
     <%= render 'layouts/navigation' %>
   </head>
 
@@ -14,3 +15,9 @@
     <%= yield %>
   </body>
 </html>
+
+ <% else %>
+ <%= render 'layouts/coming_soon' %>
+  </head>
+</html>
+<% end%>
