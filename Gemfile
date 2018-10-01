@@ -1,3 +1,4 @@
+ruby "2.4.2"
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -12,22 +13,16 @@ gem 'bootsnap'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'dotenv-rails'
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
+
 
 
 group :development, :test do
@@ -45,5 +40,4 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-ruby "2.4.2"
+gem 'active_link_to'

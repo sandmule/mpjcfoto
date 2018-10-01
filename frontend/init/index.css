@@ -1,0 +1,138 @@
+@import "normalize.css/normalize.css";
+
+html, body {
+    background-color: #edebec;
+    color: black;
+    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     height: 99vh;
+}
+
+body {
+    font-size: 22px;
+    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
+    min-height: 100vh;
+}
+
+.masthead .container {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1590px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.section--home a, .section--work a {
+    color: white;
+}
+
+.about__statement p {
+    margin: 0;
+    text-shadow: 2px 2px #737373;
+
+    -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.section--home .masthead, .section--work .masthead {
+    background-color: transparent;
+}
+
+.masthead {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #edebec;
+    -webkit-transition: background .2s ease;
+    -o-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    transition: background .2s ease;
+}
+
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.masthead h1 {
+    float: right;
+}
+
+.section--home .masthead nav, .section--work .masthead nav {
+    display: block;
+    float: left;
+    background-color: none;
+        margin-left: 2vw;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, body, code, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.masthead nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.section--home .masthead nav a.active, .section--work .masthead nav a.is-active {
+    border-color: white;
+}
+
+.masthead nav a {
+    border-bottom: 1px solid transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

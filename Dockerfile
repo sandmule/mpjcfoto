@@ -14,8 +14,6 @@ RUN apt-get update -qq \
     yarn \
     wget
 
-# RUN curl -o- -L https://yarnpkg.com/install.sh | bash
-
 WORKDIR /usr/src
 
 COPY Gemfile Gemfile.lock /usr/src/
@@ -25,6 +23,5 @@ RUN gem install bundler && bundle install && yarn install --check-files
 
 COPY . /usr/src
 
-EXPOSE 80 
+EXPOSE 80
 CMD ["bash", "docker-init.sh", "80"]
-# CMD ["bundle", "exec", "rails", "s", "-p", "2001"]
