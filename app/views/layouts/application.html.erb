@@ -6,12 +6,12 @@
     <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag 'application', :defer => "defer" %>
     <% if current_user || request.path == '/users/sign_in' || request.path == 'admin' || request.path == '/users/sign_up' %>
-    <%= render 'layouts/navigation' %>
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= react_component("SiteRouter", props: {}, prerender: false) %>
     <%= yield %>
   </body>
 </html>

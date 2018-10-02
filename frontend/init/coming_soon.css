@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf');
@@ -418,6 +417,7 @@
 }
 
 body, html {
+  margin-top: -60px;
 	font-family: Arial, sans-serif;
 	font-size: 15px;
 	color: #666666;

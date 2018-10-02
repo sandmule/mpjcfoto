@@ -1,0 +1,105 @@
+.navbar {
+  background-color: transparent;
+}
+
+.nav-light a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-light a.is-active {
+  border-bottom: 1px solid white;
+}
+
+.navbar h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.navbar .container {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*  NAVBAR DARK*/
+
+.nav-dark a {
+  color: black;
+  text-decoration: none;
+}
+.nav-dark a.is-active {
+  border-bottom: 1px solid black;
+}
+/* TO BE REMOVED */
+
+
+
+
+.section--home a, .section--work a {
+    color: white;
+}
+
+.about__statement p {
+    margin: 0;
+    text-shadow: 2px 2px #737373;
+
+    -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+
+.navbar {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #edebec;
+    -webkit-transition: background .2s ease;
+    -o-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    transition: background .2s ease;
+}
+
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+.navbar h1 {
+    float: right;
+}
+
+.navbar nav, .navbar nav {
+    display: block;
+    float: left;
+    background-color: none;
+        margin-left: 2vw;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, body, code, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.section--home .navbar nav a.active, .section--work .navbar nav a.is-active {
+    border-color: white;
+}
+
+/* .navbar nav a {
+    border-bottom: 1px solid transparent;
+} */
