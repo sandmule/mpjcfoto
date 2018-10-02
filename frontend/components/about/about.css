@@ -1,0 +1,62 @@
+/*  TO BE REMOVED*/
+.video-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.about video {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.about video.can-play {
+    opacity: 1;
+}
+
+.about__statement {
+    bottom: auto;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translate(0, -50%) translateY(0);
+    -moz-transform: translate(0, -50%) translateY(0);
+    -ms-transform: translate(0, -50%) translateY(0);
+    -o-transform: translate(0, -50%) translateY(0);
+    transform: translate(0, -50%) translateY(0);
+    font-size: 5vw;
+    line-height: 110%;
+}
+
+.about__statement {
+    position: absolute;
+    z-index: 3;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    color: white;
+    font-size: 52px;
+    line-height: 34px;
+}
+.about__statement__1 {
+  margin-bottom: 10px !important;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+.about__statement__2 {
+  margin-top: 1px;
+  line-height: 85%;
+  animation: fadein 4s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -o-animation: fadein 4s; /* Opera */
+}
