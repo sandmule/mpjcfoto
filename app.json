@@ -31,8 +31,7 @@
       "required": true
     },
     "BUCKETEER_BUCKET_NAME": {
-      "required": true,
-      "value": "mpjcfoto-test"
+      "required": true
     }
   },
   "formation": {
