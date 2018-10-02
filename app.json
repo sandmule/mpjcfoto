@@ -22,7 +22,7 @@
       "required": true
     },
     "BUCKETEER_AWS_ACCESS_KEY_ID": {
-      "required": true,
+      "required": true
     },
     "BUCKETEER_AWS_SECRET_ACCESS_KEY": {
       "required": true
@@ -31,7 +31,8 @@
       "required": true
     },
     "BUCKETEER_BUCKET_NAME": {
-      "required": true
+      "required": true,
+      "value": "mpjcfoto-test"
     }
   },
   "formation": {
