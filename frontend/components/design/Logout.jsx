@@ -14,7 +14,7 @@ export default class Logout extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.delete(`http://localhost/users/sign_out`)
+    axios.delete(`/users/sign_out`)
       .then(res => {
         console.log(res);
         console.log(res.data);
