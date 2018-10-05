@@ -91,7 +91,7 @@ export default class DropzoneS3Uploader extends React.Component {
         s3path: '',
         contentDisposition: 'auto',
         signingUrlWithCredentials: 'true',
-        uploadRequestHeaders: {'acl': 'public-read'},
+        uploadRequestHeaders: {'acl': 'public-read', 'Access-Control-Allow-Origin': '*'},
         onFinishS3Put: this.handleFinish,
         onProgress: this.handleProgress,
         onError: this.handleError,
