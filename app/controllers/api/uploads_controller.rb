@@ -3,7 +3,8 @@ class Api::UploadsController < ApplicationController
   end
 
   def presigned_url
-    filename = "#{params['album_name']}/#{params['objectName']}"
+    album_name = params['album_name'].empty? ? Time.now.strftime("%Y-%m-%d") : params['album_name']
+    filename = "#{album_name}/#{params['objectName']}"
     content_type = params['contentType']
     data = call(filename, content_type)
     response = { signedUrl: data }
