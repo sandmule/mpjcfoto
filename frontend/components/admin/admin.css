@@ -1,0 +1,24 @@
+.selection-box {
+  text-align: center;
+  border: 2px solid white;
+  background-color: #2684fc;
+  width: 15rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dropzone {
+  margin-top: 5px;
+  display: inline-block;
+}
+.dropzone-text {
+  height: 11rem;
+  line-height: 11rem;
+}
+.selection-box p {
+  color: white;
+}
+
+.selection-box input {
+  border-radius: 5px;
+}

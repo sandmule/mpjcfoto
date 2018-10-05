@@ -25,7 +25,7 @@ export default class Logout extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <button type="submit">Log out</button>
+          <button type="submit" className="btn btn-danger">Log out</button>
         </form>
       </div>
     )

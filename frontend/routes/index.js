@@ -7,6 +7,8 @@ import Design from '../components/design'
 import Photography from '../components/photography'
 import Video from '../components/video'
 import Layout from '../components/navbar/Layout'
+import Footer from '../components/footer'
+import Admin from '../components/admin'
 
 class SiteRouter extends React.Component {
   render() {
@@ -20,7 +22,9 @@ class SiteRouter extends React.Component {
             <Route path="/photography" component={Photography} />
             <Route path="/video" component={Video} />
             <Route path="/design" component={Design} />
+            <Route path="/admin" component={Admin} />
           </Switch>
+          <Footer />
         </Layout>
       </Router>
     )
