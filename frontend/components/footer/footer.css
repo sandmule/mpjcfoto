@@ -1,0 +1,17 @@
+.footer {
+  display: block;
+  background-color: black;
+  color: white;
+}
+
+.footer .bcontainer {
+  margin: 0 auto;
+  max-width: 1590px;
+  padding: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}

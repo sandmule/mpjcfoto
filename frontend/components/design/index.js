@@ -1,6 +1,5 @@
 import "./design.css";
 import React, { Component } from 'react';
-import Logout from './Logout'
 
 class Design extends Component {
   render() {
@@ -12,7 +11,6 @@ class Design extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reloads.
         </p>
-        <Logout />
       </div>
     );
   }

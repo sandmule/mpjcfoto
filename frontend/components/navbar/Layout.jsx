@@ -4,16 +4,12 @@ import {NavLink as Link} from 'react-router-dom'
 import './navbar.css'
 
 export default class Layout extends Component {
-  static propTypes = {
-    children: PropTypes.object.isRequired,
-  };
-
   render() {
-    const local = window.location.pathname === '/' ? 'nav-light' : 'nav-dark'
+    const local = window.location.pathname === '/' ? 'bnav-light' : 'bnav-dark'
     return (
       <section>
-        <header className={`${local} navbar`}>
-          <div className="container">
+        <header className={`${local} bnavbar`}>
+          <div className="bcontainer">
             <h1>MPJC Foto</h1>
             <nav>
               <ul>

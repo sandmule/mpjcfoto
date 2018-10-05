@@ -1,39 +1,43 @@
-.navbar {
+.bnavbar {
   background-color: transparent;
 }
-
-.nav-light a {
+.bnavbar a:hover{
+  text-decoration: none; 
+}
+.bnav-light a {
   color: white;
   text-decoration: none;
 }
 
-.nav-light a.is-active {
+.bnav-light a.is-active {
   border-bottom: 1px solid white;
+  padding-bottom: 2%;
 }
 
-.navbar h1, h2, h3, h4, h5, h6 {
+.bnavbar h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
     font-weight: normal;
 }
 
-.navbar .container {
+.bnavbar .bcontainer {
     padding-top: 15px;
     padding-bottom: 20px;
 }
 
-.container {
+.bcontainer {
     margin: 0 auto;
     padding: 20px;
 }
 
 /*  NAVBAR DARK*/
 
-.nav-dark a {
+.bnav-dark a {
   color: black;
   text-decoration: none;
 }
-.nav-dark a.is-active {
+.bnav-dark a.is-active {
   border-bottom: 1px solid black;
+  padding-bottom: 2%;
 }
 /* TO BE REMOVED */
 
@@ -55,7 +59,7 @@
 }
 
 
-.navbar {
+.bnavbar {
     position: fixed;
     z-index: 15;
     top: 0;
@@ -72,11 +76,11 @@ article, aside, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
-.navbar h1 {
+.bnavbar h1 {
     float: right;
 }
 
-.navbar nav, .navbar nav {
+.bnavbar nav, .bnavbar nav {
     display: block;
     float: left;
     background-color: none;
@@ -92,14 +96,14 @@ blockquote, body, code, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4,
     padding: 0;
 }
 
-.navbar nav li {
+.bnavbar nav li {
     display: inline-block;
     margin-right: 20px;
 }
-.section--home .navbar nav a.active, .section--work .navbar nav a.is-active {
+.section--home .bnavbar nav a.active, .section--work .bnavbar nav a.is-active {
     border-color: white;
 }
 
-/* .navbar nav a {
+.bnavbar nav a {
     border-bottom: 1px solid transparent;
-} */
+}
