@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import HoverImage from './HoverImage'
 import axios from 'axios';
-import sizeMe from 'react-sizeme';
-import {Link} from 'react-router-dom'
 import Gallery from 'react-photo-gallery';
 
 class PhotoGallery extends React.Component {
