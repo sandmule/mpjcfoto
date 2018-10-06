@@ -5,8 +5,12 @@ import ReactOnRails from 'react-on-rails';
 import PropTypes from 'prop-types';
 import React from 'react';
 import SiteRouter from 'routes';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import "init";
 
 ReactOnRails.register({
   SiteRouter,
 });
+
+library.add(fab)

@@ -66,7 +66,7 @@ class AlbumView extends Component {
               <Breadcrumb.Item active>{this.props.location.pathname.split('/')[2]}</Breadcrumb.Item>
             </Breadcrumb>
         </div>
-        <Gallery photos={this.state.images} onClick={this.openLightbox} />
+        <Gallery photos={this.state.images} onClick={this.openLightbox}><p>SAM</p></Gallery>
         <Lightbox images={this.state.images}
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
