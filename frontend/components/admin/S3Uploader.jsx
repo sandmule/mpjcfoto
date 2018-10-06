@@ -2,12 +2,16 @@ import DropzoneS3Uploader from './DropzoneS3Uploader'
 import React from 'react'
 import ReactOnRails from 'react-on-rails';
 const csrfToken = ReactOnRails.authenticityToken();
+import axios from 'axios';
+import {ProgressBar} from 'react-bootstrap';
 
 export default class S3Uploader extends React.Component {
-  constructor() {
-    super();
-    this.state = { value: '' };
+  constructor(props) {
+    super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.onUploadProgress = this.onUploadProgress.bind(this);
+    this.state = { value: '',  completed: 0};
+
   }
 
   handleChange(event) {
@@ -15,8 +19,14 @@ export default class S3Uploader extends React.Component {
   }
 
   handleFinishedUpload = info => {
-    console.log('File uploaded with filename', info.file.name)
-    console.log('Access it on s3 at', info.fileUrl)
+    axios.post(`api/uploads`, {
+      url: info.fileUrl,
+      name: info.file.name
+    })
+  }
+
+  onUploadProgress(percent){
+    this.setState({completed: percent});
   }
 
   render() {
@@ -35,10 +45,13 @@ export default class S3Uploader extends React.Component {
         <DropzoneS3Uploader
           onFinish={this.handleFinishedUpload}
           s3Url={s3Url}
-          maxSize={1024 * 1024 * 5}
           upload={uploadOptions}
           className='dropzone'
+          onProgress={this.onUploadProgress}
         />
+        <div>
+          <ProgressBar striped bsStyle="success" now={this.state.completed}  label={`${this.state.completed}%`}/>
+        </div>
     </section>
     )
   }

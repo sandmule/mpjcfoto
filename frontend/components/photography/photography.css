@@ -1,0 +1,26 @@
+.image img{
+  max-width: 15rem;
+  height: auto;
+  vertical-align: top;
+}
+
+.breadcrumb {
+  background: white !important;
+}
+
+.breadcrumb a {
+  padding-bottom: 1px;
+  color: black;
+  border-bottom: 1px solid;
+}
+
+.breadcrumb span {
+  padding-bottom: 1px;
+  color: black;
+  border-bottom: 1px solid;
+}
+
+.breadcrumb a:hover {
+  color: #d6d6d6;
+  text-decoration: none;
+}
