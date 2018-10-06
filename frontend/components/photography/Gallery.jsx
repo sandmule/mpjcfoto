@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import StackGrid, { transitions, easings } from "react-stack-grid";
+import HoverImage from './HoverImage'
 import axios from 'axios';
 import sizeMe from 'react-sizeme';
 import {Link} from 'react-router-dom'
-const transition = transitions.scaleDown;
+import Gallery from 'react-photo-gallery';
 
 class PhotoGallery extends React.Component {
   constructor() {
@@ -26,36 +26,14 @@ class PhotoGallery extends React.Component {
        }
 
   render() {
-    const { size: { width }} = this.props;
 	   return (
-       <StackGrid
-          monitorImagesLoaded
-          columnWidth={width <= 768 ? '100%' : 240}
-          duration={400}
-          gutterWidth={5}
-          gutterHeight={5}
-          easing={easings.cubicOut}
-          appearDelay={30}
-          appear={transition.appear}
-          appeared={transition.appeared}
-          enter={transition.enter}
-          entered={transition.entered}
-          leaved={transition.leaved}
-        >
-          {this.state.images.map(obj => (
-            <figure
-              key={obj.src}
-              className="image"
-            >
-              <Link to={`/photography/${obj.label}`} >
-                <img src={obj.src} alt={obj.label} />
-              </Link>
-              <figcaption>{obj.label}</figcaption>
-            </figure>
-          ))}
-        </StackGrid>
+       <div className="AlbumView">
+         <Gallery photos={this.state.images}
+                  ImageComponent={HoverImage}
+         />
+       </div>
 	     );
      }
 }
 
-export default sizeMe()(PhotoGallery);
+export default PhotoGallery;
