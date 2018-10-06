@@ -2,7 +2,7 @@
   background-color: transparent;
 }
 .bnavbar a:hover{
-  text-decoration: none; 
+  text-decoration: none;
 }
 .bnav-light a {
   color: white;
@@ -40,9 +40,6 @@
   padding-bottom: 2%;
 }
 /* TO BE REMOVED */
-
-
-
 
 .section--home a, .section--work a {
     color: white;

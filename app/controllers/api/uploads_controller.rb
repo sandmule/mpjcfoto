@@ -1,5 +1,6 @@
 class Api::UploadsController < ApplicationController
   def create
+    Photo.add_files(params['name'], params['url'])
   end
 
   def presigned_url

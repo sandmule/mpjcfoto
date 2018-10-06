@@ -43,5 +43,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_link_to'
 gem "aws-sdk-s3"
-
+gem 'fastimage'
 gem 'mini_racer', platforms: :ruby

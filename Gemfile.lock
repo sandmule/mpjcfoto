@@ -94,6 +94,7 @@ GEM
       railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    fastimage (2.1.4)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -231,6 +232,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   devise
   dotenv-rails
+  fastimage
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   mini_racer
@@ -252,4 +254,4 @@ RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.16.5
+   1.16.6
