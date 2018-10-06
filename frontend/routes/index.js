@@ -16,15 +16,17 @@ class SiteRouter extends React.Component {
     return (
       <Router>
         <Layout>
-          <Switch>
-            <Route exact path="/" component={About} />
-            <Route path='/contact' component={Contact} />
-            <Route path="/photography" component={Photography} />
-            <Route path="/video" component={Video} />
-            <Route path="/design" component={Design} />
-            <Route path="/admin" component={Admin} />
-          </Switch>
-          <Footer />
+          <div className="container-fluid">
+            <Switch>
+              <Route exact path="/" component={About} />
+              <Route path='/contact' component={Contact} />
+              <Route path="/photography" component={Photography} />
+              <Route path="/video" component={Video} />
+              <Route path="/design" component={Design} />
+              <Route path="/admin" component={Admin} />
+            </Switch>
+            <Footer />
+           </div>
         </Layout>
       </Router>
     )

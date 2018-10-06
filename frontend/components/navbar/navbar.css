@@ -1,22 +1,23 @@
 .bnavbar {
-  background-color: transparent;
+  background-color: transparent ;
 }
 .bnavbar a:hover{
-  text-decoration: none;
+  text-decoration: none  !important;
 }
 .bnav-light a {
-  color: white;
+  color: white  !important;
   text-decoration: none;
 }
 
 .bnav-light a.is-active {
-  border-bottom: 1px solid white;
-  padding-bottom: 2%;
+  border-bottom: 1px solid white  !important;
+  padding-bottom: 2%  !important;
 }
 
-.bnavbar h1, h2, h3, h4, h5, h6 {
+.nav-brand {
     font-size: 100%;
     font-weight: normal;
+    color: black;
 }
 
 .bnavbar .bcontainer {
@@ -27,6 +28,15 @@
 .bcontainer {
     margin: 0 auto;
     padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-order {
+      padding-left: 1rem !important;
+      left: 0;
+      position: absolute;
+      z-index: 999;
+    }
 }
 
 /*  NAVBAR DARK*/

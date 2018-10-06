@@ -1,16 +1,10 @@
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  display: block;
+  height: 80px;
   background-color: black;
-  color: white;
-}
-
-.footer .bcontainer {
-  margin: 0 auto;
-  max-width: 1590px;
-  padding: 20px;
+  left: 0;
 }
 
 .footer a {

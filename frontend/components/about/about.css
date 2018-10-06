@@ -1,27 +1,10 @@
-/*  TO BE REMOVED*/
-.video-wrapper {
-  margin: 0;
-  padding: 0;
-}
-
-.about video {
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    -webkit-transition: opacity .2s ease;
-    -o-transition: opacity .2s ease;
-    -moz-transition: opacity .2s ease;
-    transition: opacity .2s ease;
-}
-
-.about video.can-play {
-    opacity: 1;
+.about {
+  height: 100vh;
 }
 
 .about__statement {
     bottom: auto;
-    top: 50%;
+    top: 30%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -44,6 +27,29 @@
     font-size: 52px;
     line-height: 34px;
 }
+
+/*  TO BE REMOVED*/
+.video-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.about video {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.about video.can-play {
+    opacity: 1;
+}
+
+
 .about__statement__1 {
   margin-bottom: 10px !important;
   animation: fadein 2s;
