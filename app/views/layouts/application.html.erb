@@ -4,6 +4,9 @@
     <title>MPJC Foto</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_pack_tag 'application' %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= javascript_pack_tag 'application', :defer => "defer" %>
     <% if current_user || request.path == '/users/sign_in' || request.path == 'admin' || request.path == '/users/sign_up' %>
   </head>
