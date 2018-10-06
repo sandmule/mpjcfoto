@@ -1,4 +1,6 @@
 import "./about.css";
+import Gallery from '../photography/Gallery'
+
 import React, { Component } from 'react';
 
 class About extends Component {
@@ -15,6 +17,7 @@ class About extends Component {
               </div>
               </div>
           </section>
+          <Gallery />
         </main>
     );
   }
