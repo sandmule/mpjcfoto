@@ -2,7 +2,7 @@ class Api::PhotosController < ApplicationController
   def get_albums
     response = {}
     Album.all.each do |album|
-      response[album.name] = { label: album.name, src: album.photos.first.url}
+      response[album.name] = { alt: album.name, src: album.photos.first.url, width: album.photos.first.width, height: album.photos.first.height}
     end
     render json: response
   end
