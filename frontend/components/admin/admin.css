@@ -34,16 +34,25 @@
   right: 1rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .login-box {
+    text-align: center;
+    position: absolute;
+    left: 40% !important;
+    padding: 1rem;
+    top: 25%;
+    border-radius: 5px;
+    border: 2px solid #bdbdbd;
+    transform: translateY(-50%);
+  }
+}
+
 .login-box {
-  left: 40%;
-  text-align: center;
   position: absolute;
-  border: 1px solid;
+  left: 20%;
+  padding: 1rem;
+  top: 25%;
   border-radius: 5px;
-  margin-top: 20px;
-  border-radius: 25px;
   border: 2px solid #bdbdbd;
-  padding: 20px;
-  width: 20rem;
-  height: 15rem;
+  transform: translateY(-50%);
 }
