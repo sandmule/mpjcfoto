@@ -22,3 +22,28 @@
 .selection-box input {
   border-radius: 5px;
 }
+
+.title {
+  text-align: center !important;
+  font-size: 1.5rem !important;
+}
+
+.logout-button {
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+}
+
+.login-box {
+  left: 40%;
+  text-align: center;
+  position: absolute;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  border-radius: 25px;
+  border: 2px solid #bdbdbd;
+  padding: 20px;
+  width: 20rem;
+  height: 15rem;
+}

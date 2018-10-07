@@ -1,14 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-
+import {Redirect} from 'react-router';
 
 export default class Logout extends React.Component {
-  state = {
-    id: '',
-  }
-
-  handleChange = event => {
-    this.setState({ id: event.target.value });
+  constuctor() {
+    this.routeChange = this.routeChange.bind(this);
   }
 
   handleSubmit = event => {
@@ -18,14 +14,16 @@ export default class Logout extends React.Component {
       .then(res => {
         console.log(res);
         console.log(res.data);
-      })
+        window.location.href = '../';
+      });
+
   }
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <button type="submit" className="btn btn-danger">Log out</button>
+          <button type="submit" className="btn btn-danger logout-button">Log out</button>
         </form>
       </div>
     )

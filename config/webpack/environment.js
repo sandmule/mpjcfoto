@@ -1,6 +1,7 @@
 const { environment } = require('@rails/webpacker');
 const webpack = require('webpack');
 const path = require('path');
+const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 environment.plugins.append('Provide', new webpack.ProvidePlugin({
   $: 'jquery',
