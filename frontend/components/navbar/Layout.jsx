@@ -56,11 +56,6 @@ export default class Layout extends Component {
                     <NavLink>Video</NavLink>
                   </LinkContainer>
                 </NavItem>
-                <NavItem>
-                  <LinkContainer activeClassName='is-active' to='/design'>
-                    <NavLink>Design</NavLink>
-                  </LinkContainer>
-                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>

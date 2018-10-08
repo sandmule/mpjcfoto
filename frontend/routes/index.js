@@ -22,7 +22,6 @@ class SiteRouter extends React.Component {
               <Route path='/contact' component={Contact} />
               <Route path="/photography" component={Photography} />
               <Route path="/video" component={Video} />
-              <Route path="/design" component={Design} />
               <Route path="/admin" component={Admin} />
             </Switch>
             <Footer />

@@ -12,7 +12,8 @@ RUN apt-get update -qq \
     libpq-dev \
     nodejs \
     yarn \
-    wget
+    wget \
+		libav-tools
 
 WORKDIR /usr/src
 
