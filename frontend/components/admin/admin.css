@@ -56,3 +56,23 @@
   border: 2px solid #bdbdbd;
   transform: translateY(-50%);
 }
+
+@media only screen and (min-width: 768px) {
+  .album-button {
+    margin-top: 1vh !important;
+    width: 100% !important;
+  }
+}
+
+.album-button {
+  margin-top: 1vh;
+  width: 15rem;
+}
+
+.toggle-select {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+.delete-btn {
+}

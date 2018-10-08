@@ -33,7 +33,7 @@ const HoverImage = ({
       className='image-box'
       style={{ margin, height: photo.height, width: photo.width, ...cont }}
      >
-      <Link to={`/photography/${photo.alt}`}>
+      <Link to={`/admin/albums/${photo.alt}`}>
       <img
         style={
                photo.selected
