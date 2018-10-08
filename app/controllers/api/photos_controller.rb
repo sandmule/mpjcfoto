@@ -11,6 +11,7 @@ class Api::PhotosController < ApplicationController
   def get_images
     response = {}
     Album.find_by(name: params['album_name']).photos.each do |photo|
+      next if photo.file_type == 'video'
       response[photo.name] = { src: photo.url, width: photo.width, height: photo.height}
     end
     render json: response
@@ -21,8 +22,5 @@ class Api::PhotosController < ApplicationController
     params['itemsForDelete'].each do |photo|
       Photo.delete_photo(photo['src'], album)
     end
-  end
-
-  def remove_album
   end
 end

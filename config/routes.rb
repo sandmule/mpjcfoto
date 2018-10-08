@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     get 'photos/albums', to: 'photos#get_albums'
     get 'photos/images', to: 'photos#get_images'
     post'photos/remove_file', to: 'photos#remove_file'
-    post'photos/remove_album', to: 'photos#remove_album'
     get 'uploads/presigned_url', to: 'uploads#presigned_url'
     resources :uploads
   end

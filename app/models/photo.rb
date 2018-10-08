@@ -1,22 +1,62 @@
 class Photo < ApplicationRecord
-  belongs_to :album
+  belongs_to :album, optional: true
 
   def self.add_files(name, url)
-    album_name = CGI.unescape(url.split('/')[3])
+    @name = name
+    @url = url
+    @file_type = file_type_checker(name)
+
+    case @file_type
+    when 'image'
+      add_photo
+    when 'video'
+      add_video
+    else
+      puts 'ERROR at file type'
+    end
+  end
+
+  def self.add_photo
+    album_name = CGI.unescape(@url.split('/')[3])
     album = Album.where(name: album_name).first_or_create do |album|
       album.name = album_name
     end
 
-    ratio = FastImage.size(url)
+    ratio = FastImage.size(@url)
     aspect_ratio = (ratio[0].to_f / ratio[1].to_f).rationalize
 
-    where(url: url).first_or_create do |photo|
-      photo.name = name
-      photo.url = url
+    where(url: @url).first_or_create do |photo|
+      photo.name = @name
+      photo.url = @url
       photo.album_id = album.id
       photo.height = aspect_ratio.denominator
       photo.width = aspect_ratio.numerator
+      photo.file_type = @file_type
     end
+  end
+
+  def self.add_video
+    generate_thumnail
+    where(url: @url).first_or_create do |video|
+      video.name = @name
+      video.url = @url
+      video.file_type = @file_type
+    end
+  end
+
+  def self.file_type_checker(name)
+    return 'image' if /\.(jpeg|jpg|gif|png|svg)/i.match(name)
+    return 'video' if /\.(avi|flv|mkv|mov|mp4)/i.match(name)
+    "bad file type: #{name.match(/\.[0-9a-z]+$/)[0]}"
+  end
+
+  def self.generate_thumnail
+    name = @name.match( /(.*)\.[^.]+$/)[1]
+    `avconv -i #{@url} -r 1  -t 00:00:01 -f image2 tmp/#{name}.png`
+    s3 = Aws::S3::Resource.new(region: ENV['AWS_REGION'])
+    obj = s3.bucket(ENV['BUCKET_NAME']).object("video_thumbnails/#{name}.png")
+    obj.upload_file("tmp/#{name}.png", {acl: 'public-read'})
+    File.delete("tmp/#{name}.png")
   end
 
   def self.delete_photo(url, album_name)
