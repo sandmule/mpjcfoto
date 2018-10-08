@@ -3,6 +3,7 @@ import axios from 'axios';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
 import {Link} from 'react-router-dom'
+import LinkContainer from 'react-router-bootstrap'
 import {PageHeader, Button, Breadcrumb} from 'react-bootstrap';
 
 
@@ -62,7 +63,7 @@ class AlbumView extends Component {
       <div className="AlbumView">
         <div className="AlbumView-header">
             <Breadcrumb>
-              <Breadcrumb.Item href="/photography">Photography/</Breadcrumb.Item>
+              <Breadcrumb.Item componentClass="div"><Link to='/Photography'>Photography</Link>/</Breadcrumb.Item>
               <Breadcrumb.Item active>{this.props.location.pathname.split('/')[2]}</Breadcrumb.Item>
             </Breadcrumb>
         </div>
