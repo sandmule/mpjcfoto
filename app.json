@@ -52,6 +52,9 @@
     },
     {
       "url": "heroku/ruby"
+    },
+    {
+      "url":  "https://github.com/moofmayeda/avconv-buildpack.git"
     }
   ]
 }
