@@ -12,8 +12,7 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/messages' %>
     <%= react_component("SiteRouter", props: {}, prerender: false) %>
     <%= yield %>
   </body>

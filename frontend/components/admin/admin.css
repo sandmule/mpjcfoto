@@ -37,21 +37,26 @@
 @media only screen and (min-width: 768px) {
   .login-box {
     text-align: center;
-    position: absolute;
-    left: 40% !important;
-    padding: 1rem;
-    top: 25%;
+    margin-top: 11rem;
     border-radius: 5px;
     border: 2px solid #bdbdbd;
     transform: translateY(-50%);
   }
 }
 
-.login-box {
-  position: absolute;
-  left: 20%;
+.sign-up-box {
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #bdbdbd;
+  margin-top: 8vh;
   padding: 1rem;
-  top: 25%;
+}
+
+.login-box {
+  text-align: center;
+  min-width: 10vw;
+  padding: 1rem;
+  margin-top: 25vh;
   border-radius: 5px;
   border: 2px solid #bdbdbd;
   transform: translateY(-50%);
