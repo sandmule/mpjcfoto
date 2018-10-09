@@ -13,7 +13,15 @@ class Dashboard extends Component {
               <Col><h2 className='display-4 title'>Admin Panel</h2></Col>
             </Row>
             <Row>
-              <Col md={{ size: 'auto' }}><S3Uploader /><Link to='/admin/albums'><Button color="primary album-button">Album Management</Button></Link></Col>
+              <Col md={{ size: 'auto' }}>
+                <S3Uploader />
+                  <Link to='/admin/albums'>
+                    <Button color="primary album-button">Album Management</Button>
+                  </Link>
+                  <Link to='/admin/videos'>
+                    <Button color="primary album-button">Video Management</Button>
+                  </Link>
+                </Col>
               <Col md={{  offset: 11 }}><Logout /></Col>
             </Row>
         </Container>
