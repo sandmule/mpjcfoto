@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
 
-  resources :about, :design, :contact, :video, :photography
+  resources :about, :design, :contact, :photography
 
   namespace :api, defaults: { format: :json } do
     get 'photos/albums', to: 'photos#get_albums'
-    get 'photos/images', to: 'photos#get_images'
+    get 'photos/files', to: 'photos#get_files'
     post'photos/remove_file', to: 'photos#remove_file'
     get 'uploads/presigned_url', to: 'uploads#presigned_url'
     resources :uploads

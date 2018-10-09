@@ -70,8 +70,9 @@
 }
 
 .album-button {
-  margin-top: 1vh;
-  width: 15rem;
+  display: block !important;
+  margin-top: 1vh !important;
+  width: 15rem !important;
 }
 
 .toggle-select {

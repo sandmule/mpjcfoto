@@ -18,9 +18,10 @@ class AlbumView extends Component {
   }
 
   getPhotos() {
-    return axios.get(`/api/photos/images`, {
+    return axios.get(`/api/photos/files`, {
                    params: {
-                     album_name: this.props.location.pathname.split('/')[2]
+                     album_name: this.props.location.pathname.split('/')[2],
+                     file_type: 'image'
                     }
                   })
                  .then(response => {
@@ -29,7 +30,6 @@ class AlbumView extends Component {
      }
 
   componentWillMount() {
-        let images
         this.getPhotos().then(data => {
           this.setState({images: Object.values(data)});
         })

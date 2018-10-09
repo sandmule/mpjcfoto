@@ -17,9 +17,10 @@ class AlbumView extends Component {
   }
 
   getPhotos() {
-    return axios.get(`/api/photos/images`, {
+    return axios.get(`/api/photos/files`, {
                    params: {
-                     album_name: this.props.location.pathname.split('/')[3]
+                     album_name: this.props.location.pathname.split('/')[3],
+                     file_type: 'image'
                     }
                   })
                  .then(response => {
