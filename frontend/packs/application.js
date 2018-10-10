@@ -7,6 +7,7 @@ import React from 'react';
 import SiteRouter from 'routes';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import "../../node_modules/video-react/dist/video-react.css"
 import "init";
@@ -15,4 +16,4 @@ ReactOnRails.register({
   SiteRouter,
 });
 
-library.add(fab)
+library.add(fab, faEnvelope)

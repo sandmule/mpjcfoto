@@ -12,6 +12,8 @@ export default class Footer extends Component {
         <div className='bcontainer'>
             <a href="https://facebook.com/mpjcfoto/"><FontAwesomeIcon icon={['fab', 'facebook']}/></a>
             <a href="https://instagram.com/mpjcfoto/"><FontAwesomeIcon icon={['fab', 'instagram']}/></a>
+            <a href="mailto:matt@mpjcfoto.com"><FontAwesomeIcon icon={['fa', 'envelope']}/></a>
+            <a href="mailto:samsalter@me.com" className="float-right"><h6>Designed by Sam Salter <FontAwesomeIcon icon={['fa', 'envelope']}/></h6></a>
         </div>
       </footer>
     );
