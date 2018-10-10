@@ -48,7 +48,6 @@ class AlbumView extends Component {
         this.getPhotos().then(data => {
           this.setState({images: Object.values(data)});
         })
-        console.log(this.state.images)
        }
 
   selectPhoto(event, obj) {

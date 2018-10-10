@@ -54,12 +54,16 @@ class Photo < ApplicationRecord
     `avconv -i #{url} -r 1  -t 00:00:01 -f image2 tmp/#{name}.png`
     s3 = Aws::S3::Resource.new(region: ENV['AWS_REGION'])
     obj = s3.bucket(ENV['BUCKET_NAME']).object("video_thumbnails/#{name}.png")
-    obj.upload_file("tmp/#{name}.png", {acl: 'public-read'})
+    obj.upload_file("tmp/#{name}.png", { acl: 'public-read' })
     File.delete("tmp/#{name}.png")
   end
 
-  def self.delete_photo(url, album_name)
-    photo = find_by(url: url)
+  def self.delete_file(url, album_name)
+    file = find_by(url: url)
+    album_name.nil? ? delete_video(file, url) : delete_photo(file, album_name)
+  end
+
+  def self.delete_photo(photo, album_name)
     album = Album.find_by(name: album_name)
     file_path = "#{album_name}/#{photo.name}"
 
@@ -70,5 +74,19 @@ class Photo < ApplicationRecord
                                           )
     photo.destroy if s3_response.successful?
     album.destroy if album.photos.empty?
+  end
+
+  def self.delete_video(video, url)
+    file_path = [url[url[/.*?\/\/[^\/]*\//].size..-1]]
+    file_path << "video_thumbnails/#{video.thumbnail_name}.png"
+
+    file_path.each do |file|
+      s3_client = Aws::S3::Client.new
+      s3_response = s3_client.delete_object(
+                                             bucket: ENV['BUCKET_NAME'],
+                                             key: file
+                                            )
+      video.destroy if s3_response.successful?
+    end
   end
 end
