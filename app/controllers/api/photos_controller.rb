@@ -34,7 +34,7 @@ class Api::PhotosController < ApplicationController
     response = {}
     Photo.where(file_type: 'video').each do |video|
       name = get_video_name(video.name)
-      response[video.name] = { src: name[1], alt: video.thumbnail_name, width: 1, height: 1 }
+      response[video.name] = { src: name[1], alt: video.thumbnail_name, width: 1, height: 1, url: video.url }
     end
 
     response
@@ -48,7 +48,7 @@ class Api::PhotosController < ApplicationController
   def remove_file
     album = params['album']
     params['itemsForDelete'].each do |photo|
-      Photo.delete_photo(photo['src'], album)
+      Photo.delete_file(photo['src'], album)
     end
   end
 

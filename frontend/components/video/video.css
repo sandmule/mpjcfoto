@@ -1,3 +1,9 @@
 .player-box {
   width: 45%;
 }
+
+@media screen and (max-width: 768px) {
+  .player-box {
+    width: 100%;
+  }
+ }

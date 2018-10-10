@@ -33,13 +33,13 @@ class VideoViewer extends Component {
 
   render() {
     return (
-      <div className="AlbumView">
+      <div className="VideoView">
         <div className="AlbumView-header">
             <Breadcrumb>
               <Breadcrumb.Item componentClass="div"><Link to='/video'>Back</Link></Breadcrumb.Item>
             </Breadcrumb>
         </div>
-        <div className="player-box mx-auto">
+        <div className="player-box mx-auto vertical-center">
         <Player
           playsInline
           poster={this.state.video.thumbnail}
